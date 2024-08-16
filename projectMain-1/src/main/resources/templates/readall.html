@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Find All Entities</title>
+</head>
+<style>/* Apply a gradient background and text styling to the entire page */
+body {
+    margin: 0;
+    padding: 0;
+    height: 100vh; /* Full viewport height */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    font-family: 'Arial', sans-serif;
+    color: #fff;
+    background: linear-gradient(135deg, #3498db, #8e44ad); /* Diagonal gradient */
+    background-size: 200% 200%; /* Larger background for smooth animation */
+    animation: gradientAnimation 10s ease infinite; /* Gradient animation */
+}
+
+/* Keyframes for gradient animation */
+@keyframes gradientAnimation {
+    0% {
+        background-position: 0% 0%;
+    }
+    50% {
+        background-position: 100% 100%;
+    }
+    100% {
+        background-position: 0% 0%;
+    }
+}
+
+/* Styling for text content */
+h1 {
+    font-size: 3rem;
+    margin: 0;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5); /* Shadow effect for text */
+}
+
+p {
+    font-size: 1.2rem;
+    margin-top: 10px;
+    text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.5); /* Shadow effect for text */
+}
+</style>
+<body>
+    <h1>All Entities</h1>
+    <table border="1">
+        <tr>
+            <th>ID</th>
+            <th>Name</th>
+            <th>course</th>
+            <th>fees</th>
+        </tr>
+        <tr th:each="entity : ${all}">
+            <td th:text="${entity.id}">ID</td>
+            <td th:text="${entity.name}">Name</td>
+            <td th:text="${entity.course}">course</td>
+             <td th:text="${entity.fees}">fees</td>
+            
+        </tr>
+    </table>
+        <a th:href="@{/home}">BACK TO HOME</a>
+</body>
+</html>

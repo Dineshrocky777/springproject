@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Management System</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            color: #333;
+            background: url('background-image.jpg') no-repeat center center fixed; /* Set the background image */
+            background-size: cover;
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+        }
+
+        .container {
+            background-color: rgba(255, 255, 255, 0.85); /* Semi-transparent white background */
+            border-radius: 15px;
+            box-shadow: 0 12px 30px rgba(0, 0, 0, 0.3); /* Stronger shadow for depth */
+            padding: 40px;
+            max-width: 600px;
+            width: 100%;
+            text-align: center;
+            transition: transform 0.3s ease-in-out; /* Animation for hover effect */
+        }
+
+        .container:hover {
+            transform: scale(1.05); /* Slightly enlarge the container on hover */
+        }
+
+        .container h1 {
+            font-size: 2.5em;
+            color: #2c3e50;
+            margin-bottom: 30px;
+            font-weight: 700;
+            animation: fadeInDown 1s ease; /* Title fade-in effect */
+        }
+
+        .button {
+            background-color: #3498db;
+            border: none;
+            color: white;
+            padding: 12px 25px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            margin: 10px;
+            cursor: pointer;
+            border-radius: 5px;
+            transition: all 0.3s ease;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2); /* Enhanced shadow for buttons */
+        }
+
+        .button:hover {
+            background-color: #2980b9;
+            transform: translateY(-5px) scale(1.1); /* Lift and enlarge button on hover */
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3); /* Darker shadow on hover */
+        }
+
+        .button:active {
+            background-color: #1f618d;
+            transform: translateY(2px); /* Slight push effect on click */
+            box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2); /* Reduce shadow on click */
+        }
+
+        .button:focus {
+            outline: none;
+            box-shadow: 0 0 0 3px rgba(52, 152, 219, 0.5);
+        }
+
+        /* Keyframes for title animation */
+        @keyframes fadeInDown {
+            from {
+                opacity: 0;
+                transform: translateY(-20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Student Management System</h1>
+        <a href="/adduser" class="button">Add New Student</a>
+        <a href="/viewuser" class="button">Show New Student</a>
+        <a href="/readAlluser" class="button">Show All Students</a>
+        <a href="/updatemain" class="button">Update Student</a>
+        <a href="/delete" class="button">Delete Student by ID</a>
+        <a href="/deleteAll" class="button">Delete All Students</a>
+        
+    </div>
+</body>
+</html>

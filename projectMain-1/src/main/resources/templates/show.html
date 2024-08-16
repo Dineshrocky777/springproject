@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+        }
+        h1 {
+            color: #333;
+        }
+        a {
+            text-decoration: none;
+            color: #0066cc;
+            font-size: 18px;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+  
+    
+
+    <title>Student Details</title>
+</head>
+<body>
+    <h1>Student Details</h1>
+   
+   
+    <div>
+        <p><strong>ID:</strong> <span th:text="${Show.id}"></span></p>
+        <p><strong>Name:</strong> <span th:text="${Show.name}"></span></p>
+        <p><strong>course:</strong> <span th:text="${Show.course}"></span></p>
+        <p><strong>fess:</strong> <span th:text="${Show.fees}"></span></p>
+    </div>
+    
+    
+         
+    
+         <p><a href="/home">Back to Home</a></p>
+         
+          <p><a href="/viewuser">Return TO Search</a></p>
+
+
+ 
+ 
+</body>
+</html>
